@@ -1,5 +1,5 @@
 //For using gsap with locomotive this code inside function init is necessary which I have taken from Github
-
+//This code inside function has to copied otherwise gsap and scroll trigger won't work together
 function init(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -83,3 +83,18 @@ var tl2=gsap.timeline({
 tl2.to("#main",{
     backgroundColor:"#fff"
 })
+
+//Scroll Trigger of Certificates in page 3
+
+
+gsap.utils.toArray('.cert').forEach(section => {
+
+    ScrollTrigger.create({
+        trigger:section,
+        start:'top top',
+        // end:'top 10%',
+        pin:true,
+        pinSpacing:false,
+        scroller:"#main"      
+})  
+});
