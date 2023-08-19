@@ -11,6 +11,8 @@ html,body{
     background: #000;
 }
 
+/* CURSOR STYLING */
+
 .cursor{
     width: 20px;
     height: 20px;
@@ -21,6 +23,7 @@ html,body{
     mix-blend-mode: difference;
 }
 
+/* Page 1 Starts here */
 
 .page1{
     height: 100vh;
@@ -100,4 +103,66 @@ html,body{
    position: relative;
    left: 50%;
    transform: translate(-50%,0);
+}
+
+/* Page 2 Starts here */
+
+.page2{
+    min-height:90vh;
+    width: 100%;
+    padding:100px 5vw ;
+    border-bottom: 2px solid #6c6c6c;
+    position: relative;
+    z-index: 9;
+}
+.page2 h1{
+    font-size: 7vw;
+    font-weight: 500;
+    color: #111;
+}
+.page2-container{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.page2-left{
+    width: 38%;
+    opacity: 1;
+}
+.page2-left h2 span{
+    color: #EDBFFF;
+    font-family: "mazius";
+}
+
+.page2-left h2{
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #111;
+    line-height: 4vw;
+}
+
+.page2-right{
+    width: 24%;
+}
+.page2-right p{
+    font-size: 1.9vw;
+    color:#111;
+}
+.page2-right p span{
+    color: #EDBFFF;
+    font-family: "mazius";
+}
+.page2-right button{
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 4px 0;
+    background: #EDBFFF;
+    color: #111;
+    margin-top: 20px;
+
 }

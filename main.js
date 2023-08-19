@@ -1,3 +1,5 @@
+//For using gsap with locomotive this code inside function init is necessary which I have taken from Github
+
 function init(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -27,12 +29,17 @@ ScrollTrigger.refresh();
 }
 init();
 
+//Javascript for Cursor styling
+
 var crsr=document.querySelector(".cursor");
 var main=document.querySelector('#main');
 main.addEventListener('mousemove',function(dets){
     crsr.style.left=dets.x+"px";
     crsr.style.top=dets.y+"px";
 })
+
+
+//Gsap in page1 for  moving texts and image coming from down
 
 var tl=gsap.timeline({
     scrollTrigger:{
@@ -61,3 +68,18 @@ gsap.to(".image",{
         scrub:true
     }
 },"anim")
+
+//Changing background color of page 2
+
+var tl2=gsap.timeline({
+    scrollTrigger:{
+        trigger:".page1 h1",
+        scroller:'#main',
+        start:'top -115%',
+        end:'top -120%',
+        scrub:3
+    }
+})
+tl2.to("#main",{
+    backgroundColor:"#fff"
+})
